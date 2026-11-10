@@ -1,0 +1,20 @@
+SOLUTION TO LEETCODE PROBLEM 2469 - Converting the Temperature
+
+class Solution {
+public:
+// We don't need to use loops here. 
+// Array is always a constant size regardless of what the input size is.
+    vector<double> convertTemperature(double celsius) {
+        
+        vector<double> ans(2); //The output array has a size of 2. 
+        double kelvin, fahrenheit; 
+
+        kelvin = celsius + 273.15; //Formula for kelvin
+        fahrenheit = celsius * 1.80 + 32.00; //Formula for fahrenheit
+        ans[0] = kelvin; //'ans[0]' gives 0th index as kelvin
+        ans[1] = fahrenheit; //'ans[1] gives 1st index as fahrenheit
+
+        return ans;
+
+    }
+};
